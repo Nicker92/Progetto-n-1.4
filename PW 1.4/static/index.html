@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Benessere - Prenotazioni</title>
+    <!-- Collegamento al file CSS per lo stile della pagina -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Centro Benessere e Spa</h1>
+        <p>Prenota il tuo momento di relax!</p>
+    </header>
+
+    <main>
+        <!-- Sezione galleria immagini -->
+        <section id="gallery">
+            <h2>Galleria del Centro</h2>
+            <div class="image-gallery">
+                <img src="static/img/spa1.jpg" alt="Spa 1"> 
+                <img src="static/img/spa2.jpg" alt="Spa 2"> 
+                <img src="static/img/spa3.jpg" alt="Spa 3"> 
+                <img src="static/img/spa4.jpg" alt="Spa 4"> 
+            </div>
+        </section>
+
+        <!-- Sezione per prenotare un trattamento -->
+        <section id="booking-section">
+            <h2>Prenota un trattamento</h2>
+            <form id="booking-form">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Seleziona Servizio:</label>
+                <select id="service" name="service" required>
+                    <option value="">--Scegli un servizio--</option>
+                    <option value="Massaggio">Massaggio</option>
+                    <option value="Accesso alla Spa">Accesso alla Spa</option>
+                    <option value="Trattamento Viso">Trattamento Viso</option>
+                </select>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Ora:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Prenota</button>
+            </form>
+        </section>
+
+        <!-- Sezione per gestire le prenotazioni esistenti -->
+        <section id="manage-section">
+            <h2>Gestisci Prenotazioni</h2>
+            <p>Inserisci la tua email per visualizzare, modificare o cancellare le tue prenotazioni.</p>
+            <form id="manage-form">
+                <label for="email-manage">Email:</label>
+                <input type="email" id="email-manage" name="email-manage" required>
+                <button type="submit">Visualizza Prenotazioni</button>
+            </form>
+            <!-- Qui appariranno le prenotazioni dell'utente -->
+            <div id="reservations-list"></div> 
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Centro Benessere e Spa. Tutti i diritti riservati.</p>
+    </footer>
+
+    <!-- Collegamento al file JS -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
